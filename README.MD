@@ -18,11 +18,11 @@
 ## 1. happysimple
 源自：[HappySimple/Typora-theme-Happysimple](https://github.com/HappySimple/Typora-theme-Happysimple)
 
-效果图
+效果图  
 [<img src="./screenshot/happysimple.png" width="200"/>](./screenshot/happysimple.png?raw=true)
 
 ## 2. Alice
 源自：[linklinco/Typora-Theme-Alise](https://github.com/linklinco/Typora-Theme-Alise)
 
-效果图
+效果图  
 [<img src="./screenshot/Alice.png" width="200"/>](./screenshot/Alice.png?raw=true)
