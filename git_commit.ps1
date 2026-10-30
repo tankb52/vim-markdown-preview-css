@@ -5,7 +5,8 @@
 # 1. 没变更就跳过
 if (-not (git status --porcelain)) {
     Write-Host "✅ 没有需要提交的变更，脚本跳过。" -ForegroundColor Green
-    Read-Host "按回车键退出..."
+    Write-Host "按任意键退出..." -NoNewline
+    $null = [Console]::ReadKey($true)
     exit
 }
 
@@ -29,4 +30,5 @@ Write-Host "`n📋 最近提交日志：" -ForegroundColor Cyan
 git log -n 5 --oneline
 
 # 暂停，防止双击运行窗口闪退
-Read-Host "`n操作完成，按回车键退出..."
+Write-Host "`n操作完成，按任意键退出..." -NoNewline
+$null = [Console]::ReadKey($true)
