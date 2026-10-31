@@ -1,4 +1,17 @@
-﻿# 解决终端中文乱码
+﻿<#
+# * File Name       : git_commit.ps1
+# * Version         : 0.0.1
+# * Created Time    : 2026-10-31 周六 14:35:23
+# * Modified Time   : 2026-10-31 周六 14:37:47
+# * Author          : Knat
+# * Copyright       : (C) 2004-2026 Knat. All rights reserved.
+# * Description     : 自动提交脚本。
+# *
+#>
+
+# 这里是PowerShell脚本的实际内容
+#
+# 解决终端中文乱码
 [Console]::OutputEncoding = [System.Text.Encoding]::UTF8
 [Console]::InputEncoding = [System.Text.Encoding]::UTF8
 
@@ -27,7 +40,7 @@ git push
 
 # 打印最近 5 条日志
 Write-Host "`n📋 最近提交日志：" -ForegroundColor Cyan
-git log -n 5 --oneline
+git log --color --graph --pretty=format:'%Cgreen%<(16,trunc)%ah%Creset | %C(yellow)%h%Creset | %Cblue%<(8,trunc)%an%Creset | %C(cyan)%d%Creset%s' --abbrev-commit -n 6
 
 # 暂停，防止双击运行窗口闪退
 Write-Host "`n操作完成，按任意键退出..." -NoNewline
